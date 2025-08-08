@@ -1,4 +1,3 @@
-// 验证访问令牌
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 export default async (req, res) => {
@@ -7,7 +6,6 @@ export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
-  // 处理预检请求
   if (req.method === 'OPTIONS') return res.status(200).end();
   
   try {
